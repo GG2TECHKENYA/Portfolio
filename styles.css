@@ -1,0 +1,304 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body 
+{
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Navigation Bar */
+nav 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo 
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu 
+{
+    list-style: none;
+    display: flex;
+}
+
+.menu li 
+{
+    margin: 0 15px;
+}
+
+.menu a 
+{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover 
+{
+    color: #00bcd4;
+}
+
+.hamburger 
+{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.hero-content h1 
+{
+    font-size: 40px;
+    color: #00bcd4;
+}
+
+.hero-content h2 
+{
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.hero-content p 
+{
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.hero-content .btn 
+{
+    display: inline-block;
+    background: #00bcd4;
+    color: #121212;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hero img 
+{
+    width: 350px;
+    border-radius: 50%;
+    border: 5px solid #00bcd4;
+}
+
+/* Section Styles */
+section 
+{
+    padding: 100px 10%;
+    text-align: center;
+}
+
+/* Skills Section */
+.skills-container 
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.skill-category 
+{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 30%;
+}
+
+.skill-category h3 
+{
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.skill-category ul 
+{
+    list-style: none;
+}
+
+.skill-category li 
+{
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Experience Section */
+.experience-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.experience-card 
+{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 45%;
+    margin: 10px;
+    text-align: left;
+}
+
+.experience-card h3 
+{
+    color: #00bcd4;
+}
+
+.experience-card p 
+{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Project Section */
+.project-grid 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card 
+{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 30%;
+    text-align: left;
+}
+
+.project-card h3 
+{
+    color: #00bcd4;
+}
+
+/* Contact Form */
+form 
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+form input, form textarea 
+{
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button 
+{
+    background: #00bcd4;
+    color: #121212;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover 
+{
+    background: #008c9e;
+}
+
+/* Footer */
+footer 
+{
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) 
+{
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        width: 200px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .menu.active 
+    {
+        display: flex;
+    }
+
+    .hamburger 
+    {
+        display: block;
+    }
+
+    .hero 
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img 
+    {
+        margin-top: 20px;
+        width: 250px;
+    }
+
+    .skills-container, .experience-container, .project-grid 
+    {
+        flex-direction: column;
+    }
+
+    .skill-category, .experience-card, .project-card 
+    {
+        width: 100%;
+    }
+
+    form 
+    {
+        width: 100%;
+    }
+}
